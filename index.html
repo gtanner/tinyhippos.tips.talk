@@ -19,9 +19,6 @@
 
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-        <!-- accel stuff -->
-        <link rel="stylesheet" href="accel/rpg.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <!-- accel stuff -->
 	</head>
 	
 	<body>
@@ -135,15 +132,10 @@
 					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
 					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
-                    { src: 'accel/cordova.playbook.js', async: false},
-                    { src: 'accel/main.js', async: false }
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
 				]
 			});
 			
-            Reveal.addEventListener("accelinit", function () {
-                game.init();
-            });
 		</script>
 	</body>
 </html>
