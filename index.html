@@ -1,0 +1,149 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>The tinyHippos story</title>
+
+		<meta name="description" content="A walkthrew of the Ripple Mobile Environment Emulator">
+		<meta name="author" content="Gord Tanner">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- accel stuff -->
+        <link rel="stylesheet" href="accel/rpg.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <!-- accel stuff -->
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<div class="slides">
+
+                <section>
+                    <h1>The tinyHippos story</h1>
+                    <h3>Gord Tanner, (@gordtanner)</h3>
+                    <h3>Dan Silivestru, (@dansilivestru)</h3>
+                </section>
+
+                <section>
+                    <h1>The story</h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Experience is a liability</h1>
+                    </section>
+
+                    <section data-state="alert">
+                        <h2>DAfUQ</h2>
+                        <img src="img/look.png" alt="" />
+                    </section>
+                </section>
+
+                <section>
+                	<h1>You can't do it part time</h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>The team is important</h1>
+                    </section>
+
+                    <section data-state="alert">
+                        <h1>Know your weaknesses</h1>
+                        <img src="img/count.jpg" alt="" />
+                    </section>
+
+                    <section>
+
+                        <h2>Make sure you get along</h2>
+                        <img src="img/time.jpg" alt="" />
+                    
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Solve a real problem</h1>
+                    </section>
+
+                    <section data-state="alert">
+                        <img src="img/supertree.jpg" style="height: 200%" alt="" />
+                    </section>
+
+                    <section data-state="alert">
+                        <h1>Pivot</h1>
+                        <img src="img/simpsons.bmp" alt="" />
+                        <h3>The problem you start with may not be the problem you end with</h3>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Talk to real people</h1>
+                    </section>
+
+                    <section data-state="alert">
+                        <img src="img/awesome.jpg" style="width: 200%" alt="" />
+                    </section>
+                </section>
+
+                <section>
+                	<h1>Start on solid ground</h1>
+                </section>
+
+                <section>
+                	<h1>Fail Early</h1>
+                </section>
+
+                <section>
+                	<h1>Stay thrifty my friends</h1>
+                    <img src="img/man.jpg" alt="" />
+                </section>
+
+			</div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				theme: Reveal.getQueryHash().theme || 'sky', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                    { src: 'accel/cordova.playbook.js', async: false},
+                    { src: 'accel/main.js', async: false }
+				]
+			});
+			
+            Reveal.addEventListener("accelinit", function () {
+                game.init();
+            });
+		</script>
+	</body>
+</html>

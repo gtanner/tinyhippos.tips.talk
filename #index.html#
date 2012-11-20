@@ -1,0 +1,92 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Cordova: Mer?</title>
+
+		<meta name="description" content="A walkthrew of the Ripple Mobile Environment Emulator">
+		<meta name="author" content="Gord Tanner">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- accel stuff -->
+        <link rel="stylesheet" href="accel/rpg.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <!-- accel stuff -->
+	</head>
+	
+	<body>
+		
+:q
+		<DIV class="reveal">
+
+			<div class="slides">
+
+                <section>
+                    <h1>The rollercoaster ride</h1>
+                    <h2>The tinyHippos story</h2>
+                    <h3>Gord Tanner, Code Poet</h3>
+                    <h3>(Research In Motion)</h3>
+                    <h3>@gordtanner</h3>
+                </section>
+
+                <section>
+                    <h1>The story</h1>
+                </section>
+
+                <section>
+                	<h1>Experience is a liability</h1>
+                </section>
+
+                <section>
+                	<h1>You can't do it part time</h1>
+                </section>
+
+                <section>
+                	<h1>The team is important</h1>
+                </section>
+
+			</div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				theme: Reveal.getQueryHash().theme || 'sky', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+                    { src: 'accel/cordova.playbook.js', async: false},
+                    { src: 'accel/main.js', async: false }
+				]
+			});
+			
+            Reveal.addEventListener("accelinit", function () {
+                game.init();
+            });
+		</script>
+	</body>
+</html>
